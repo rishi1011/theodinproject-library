@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>My Project</title>
+</head>
+
+<body>
+    <div class="form">
+        <span class="cross"><i class="fas fa-times"></i></span>
+        <form onsubmit="return false">
+            <input type="text" title="punda" id="title-input" name="title" placeholder="Title" autocomplete="off"
+                required><br>
+            <input type="text" id="author-input" name="author" placeholder="Author" autocomplete="off" required><br>
+            <select name="genre" id="genre-input">
+                <option value="Fantasy">Fantasy</option>
+                <option value="Horror">Horror</option>
+                <option value="Romantic">Romantic</option>
+                <option value="Thriller">Thriller</option>
+            </select><br>
+            <input type="number" id="pages-input" placeholder="Pages" required><br>
+            <label for="check-input">Read
+                <input type="checkbox" id="check-input"><br>
+            </label>
+            <button class="btn submit" type="submit">Submit</button>
+        </form>
+    </div>
+    <main id="main">
+        <h1>Library</h1>
+        <button class="btn new">Add Book</button>
+        <div class="book-item-container">
+        </div>
+    </main>
+</body>
+
+</html>

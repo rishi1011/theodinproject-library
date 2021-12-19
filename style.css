@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    /* outline: 1px solid red; */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 100vh;
+    overflow: auto;
+    margin: 0;
+    /* padding: 10px; */
+    position: relative;
+    background-color: #fff2e5;
+}
+
+main{
+    height: 100%;
+    /* opacity: 0.2; */
+}
+
+.form{
+    padding: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: antiquewhite;
+    z-index: 1;
+} 
+
+span.cross{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+span.cross:active{
+    transform: scale(0.9);
+}
+
+form{ 
+    height: 23rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    text-align: left;
+}
+
+#title-input,
+#author-input,
+#genre-input,
+#pages-input,
+label{
+    height: 3rem;
+    font-size: 2rem;
+    width: 15rem;
+}
+
+.btn{
+    border: none;
+    padding: 15px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 1rem;
+    width: 8rem;
+    font-size: 1rem;
+}
+
+h1{
+    margin: 0;
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
+
+.book-item-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 100%;
+    padding: 1rem;
+    column-gap: 7rem;
+    row-gap: 2.5rem;
+}
+
+.card{
+    width: 350px;
+    height: 260px;
+    padding: 0.2rem;
+    border: 1px solid black;
+    /* background-color: #f2dcb1; */
+    background: rgb(2,0,36);
+    color: white;
+    background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(168,168,168,1) 50%, rgba(168,168,168,1) 100%);
+    position: relative;
+}
+
+.card:hover > span.delete{
+    display: inline;
+}
+
+.card.read-gradient{
+    background: linear-gradient(120deg, rgba(2, 0, 36, 1) 0%, rgba(0, 144, 255, 1) 50%, rgba(168, 168, 168, 1) 100%);
+}
+
+span.delete{
+    display: none;
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    font-size: 20px;
+    color: red;
+}
+
+span.delete:active{
+    transform: scale(0.9);
+}
+
+.content{
+    height: 100%;
+}
+
+.top-content{
+    display: flex;
+    height: 50%;
+}
+
+p{
+    margin: 0;
+}
+
+.icon{
+    width: 30%;
+    /* padding: 4rem 0; */
+}
+
+span.read{
+    font-size: 6.5rem;
+}
+
+.info{
+    width: 68%;
+    margin-left: auto;
+}
+
+.title{
+    font-size: 20px;
+    text-align: left;
+    max-height: 6rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* white-space: nowrap; */
+}
+
+.author{
+    width: 85%;
+    margin-left: auto;
+    margin-top: .3rem;
+    text-align: right;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.bottom-content{
+    display: flex;
+    height: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box{
+    width: 6rem;
+    height: 6rem;
+    border: 1px solid black;
+}
+
+.box.read{
+    border-radius: 3px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+
+.box.read:hover{
+    transform: scale(1.1);
+}
+
+.box.read:active{
+    transform: scale(1);
+}
+
+p.pages,
+p.genre,
+p.read{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
