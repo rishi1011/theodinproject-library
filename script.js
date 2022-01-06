@@ -15,13 +15,29 @@ const deleteCardBtn = document.querySelector('span.delete');
 
 let myLibrary = [];
 
-function Book(title, author, pages, genre, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.genre = genre;
-    this.read = read;
+class Book {
+    title;
+    author;
+    pages;
+    genre;
+    read;
+
+    constructor(title, author, pages, genre, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.genre = genre;
+        this.read = read;
+    }
 }
+
+// function Book(title, author, pages, genre, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.genre = genre;
+//     this.read = read;
+// }
 
 function deleteBookFromLibraryFromText(text) {
     let newLib = myLibrary.filter(book => {
